@@ -76,3 +76,13 @@ mysql> SELECT * FROM AddressBook;
 |  2 | Harsh      | Singh     | Vaishali Nagar      | New Delhi | Delhi       | 222333 |   7896541230 | xyz@gmail.com |
 |  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai    | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com |
 +----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+
+
+#UC5 
+
+mysql> SELECT * FROM AddressBook
+    -> WHERE City = 'Mumbai';
++----+------------+-----------+---------------------+--------+-------------+--------+--------------+---------------+
+| Id | First_Name | Last_Name | Address             | City   | State       | Zip    | Phone_Number | Email         |
++----+------------+-----------+---------------------+--------+-------------+--------+--------------+---------------+
+|  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com |
++----+------------+-----------+---------------------+--------+-------------+--------+--------------+---------------+
