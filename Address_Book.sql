@@ -118,3 +118,20 @@ mysql> SELECT * FROM AddressBook;
 |  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai    | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com | Friend |
 +----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+--------+
 
+#UC7
+
+mysql> SELECT City,COUNT(City) FROM AddressBook GROUP BY City;
++-----------+-------------+
+| City      | COUNT(City) |
++-----------+-------------+
+| New Delhi |           2 |
+| Mumbai    |           1 |
++-----------+-------------+
+
+mysql> SELECT State,COUNT(State) FROM AddressBook GROUP BY State;
++-------------+--------------+
+| State       | COUNT(State) |
++-------------+--------------+
+| Delhi       |            2 |
+| Maharashtra |            1 |
++-------------+--------------+
