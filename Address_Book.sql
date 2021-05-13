@@ -17,7 +17,6 @@ mysql> show databases;
 | sys                |
 | world              |
 +--------------------+
-8 rows in set (0.00 sec)
 
 mysql> USE AddressBookService;
 Database changed
@@ -67,3 +66,13 @@ mysql> INSERT INTO AddressBook(First_Name,Last_Name,Address,City,State,Zip,Phone
     -> ('Harsh','Singh','Vaishali Nagar', 'New Delhi','Delhi',222333,7896541230,'xyz@gmail.com'),
     -> ('Shefali','Verma','124/A Shastri Nagar','Mumbai','Maharashtra',412210,8745961230,'qwr@yahoo.com');
 
+#UC4
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+
+| Id | First_Name | Last_Name | Address             | City      | State       | Zip    | Phone_Number | Email         |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+
+|  1 | Mohd       | Arshad    | Karol Bagh          | New Delhi | Delhi       | 110005 |   9987644333 | abc@gmail.com |
+|  2 | Harsh      | Singh     | Vaishali Nagar      | New Delhi | Delhi       | 222333 |   7896541230 | xyz@gmail.com |
+|  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai    | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+
