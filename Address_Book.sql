@@ -86,3 +86,35 @@ mysql> SELECT * FROM AddressBook
 +----+------------+-----------+---------------------+--------+-------------+--------+--------------+---------------+
 |  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com |
 +----+------------+-----------+---------------------+--------+-------------+--------+--------------+---------------+
+
+#UC6
+
+mysql> ALTER TABLE AddressBook
+    -> ADD type VARCHAR(15);
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+------+
+| Id | First_Name | Last_Name | Address             | City      | State       | Zip    | Phone_Number | Email         | type |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+------+
+|  1 | Mohd       | Arshad    | Karol Bagh          | New Delhi | Delhi       | 110005 |   9987644333 | abc@gmail.com | NULL |
+|  2 | Harsh      | Singh     | Vaishali Nagar      | New Delhi | Delhi       | 222333 |   7896541230 | xyz@gmail.com | NULL |
+|  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai    | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com | NULL |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+------+
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Self'
+    -> WHERE First_Name = 'Mohd';
+
+mysql> UPDATE AddressBook
+    -> SET type = 'Friend'
+    -> WHERE First_Name = 'Harsh' or Last_Name = 'Verma';
+
+mysql> SELECT * FROM AddressBook;
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+--------+
+| Id | First_Name | Last_Name | Address             | City      | State       | Zip    | Phone_Number | Email         | type   |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+--------+
+|  1 | Mohd       | Arshad    | Karol Bagh          | New Delhi | Delhi       | 110005 |   9987644333 | abc@gmail.com | Self   |
+|  2 | Harsh      | Singh     | Vaishali Nagar      | New Delhi | Delhi       | 222333 |   7896541230 | xyz@gmail.com | Friend |
+|  3 | Shefali    | Verma     | 124/A Shastri Nagar | Mumbai    | Maharashtra | 412210 |   8745961230 | qwr@yahoo.com | Friend |
++----+------------+-----------+---------------------+-----------+-------------+--------+--------------+---------------+--------+
+
