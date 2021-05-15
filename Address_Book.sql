@@ -96,5 +96,23 @@ mysql> SELECT * FROM address_book
 |  1 | Mohd       | Arshad    | Karol Bagh | New Delhi | Delhi | 110005 | 9717704916   | klg@klg.com |
 +----+------------+-----------+------------+-----------+-------+--------+--------------+-------------+
 
+#UC7
+
+mysql> SELECT COUNT(city)
+    -> FROM address_book;
++-------------+
+| COUNT(city) |
++-------------+
+|           2 |
++-------------+
+
+mysql> SELECT COUNT(state)
+    -> FROM address_book;
++--------------+
+| COUNT(state) |
++--------------+
+|            2 |
++--------------+
+
 
 
