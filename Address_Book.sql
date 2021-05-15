@@ -114,5 +114,22 @@ mysql> SELECT COUNT(state)
 |            2 |
 +--------------+
 
+#UC8
+
+mysql> INSERT address_book (first_name, last_name, address, city, state, zip, phone_number, emailId) VALUES
+    -> ('Kalyan', 'Kumar', 'Andheri', 'Mumbai', 'Maharashtra', '530066','9882763845', 'pl@p.com'),
+    -> ('Atik', 'Singh', 'Dharavi', 'Mumbai', 'Maharashtra', '530044','9494631888', 'mlk@mln.com');
+
+mysql> SELECT * FROM address_book
+    -> WHERE city = 'Mumbai'
+    -> ORDER BY first_name ASC;
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+
+| id | first_name | last_name | address | city   | state       | zip    | phone_number | emailId     |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+
+|  5 | Atik       | Singh     | Dharavi | Mumbai | Maharashtra | 530044 | 9494631888   | mlk@mln.com |
+|  4 | Kalyan     | Kumar     | Andheri | Mumbai | Maharashtra | 530066 | 9882763845   | pl@p.com    |
+|  2 | Priyansh   | Kumar     | Malabar | Mumbai | Maharashtra | 530066 | 9882763875   | pl@pl.com   |
++----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+
+
 
 
