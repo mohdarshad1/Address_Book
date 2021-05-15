@@ -131,5 +131,33 @@ mysql> SELECT * FROM address_book
 |  2 | Priyansh   | Kumar     | Malabar | Mumbai | Maharashtra | 530066 | 9882763875   | pl@pl.com   |
 +----+------------+-----------+---------+--------+-------------+--------+--------------+-------------+
 
+#UC9
+
+mysql> select *From address_book;
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------------+
+| id | first_name | last_name | address    | city      | state       | zip    | phone_number | emailId     | profession |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------------+
+|  1 | Mohd       | Arshad    | Karol Bagh | New Delhi | Delhi       | 110005 | 9717704916   | klg@klg.com | NULL       |
+|  2 | Priyansh   | Kumar     | Malabar    | Mumbai    | Maharashtra | 530066 | 9882763875   | pl@pl.com   | NULL       |
+|  4 | Kalyan     | Kumar     | Andheri    | Mumbai    | Maharashtra | 530066 | 9882763845   | pl@p.com    | NULL       |
+|  5 | Atik       | Singh     | Dharavi    | Mumbai    | Maharashtra | 530044 | 9494631888   | mlk@mln.com | NULL       |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------------+
+
+#UC9
+
+mysql> ALTER TABLE Address_Book ADD name VARCHAR(15);
+
+mysql> ALTER TABLE Address_Book ADD type VARCHAR(15) DEFAULT 'Friend';
+
+mysql> select *From address_book;
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
+| id | first_name | last_name | address    | city      | state       | zip    | phone_number | emailId     | name | type   |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
+|  1 | Mohd       | Arshad    | Karol Bagh | New Delhi | Delhi       | 110005 | 9717704916   | klg@klg.com | NULL | Friend |
+|  2 | Priyansh   | Kumar     | Malabar    | Mumbai    | Maharashtra | 530066 | 9882763875   | pl@pl.com   | NULL | Friend |
+|  4 | Kalyan     | Kumar     | Andheri    | Mumbai    | Maharashtra | 530066 | 9882763845   | pl@p.com    | NULL | Friend |
+|  5 | Atik       | Singh     | Dharavi    | Mumbai    | Maharashtra | 530044 | 9494631888   | mlk@mln.com | NULL | Friend |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
+
 
 
