@@ -34,7 +34,21 @@ mysql> DESC address_book;
 | emailId      | varchar(100) | NO   |     | NULL    |                |
 +--------------+--------------+------+-----+---------+----------------+
 
+#UC3
 
+mysql> INSERT address_book (first_name, last_name, address, city, state, zip, phone_number, emailId) VALUES
+    -> ('Mohd', 'Arshad', 'Karol Bagh', 'New Delhi', 'Delhi', '110005','9494691188', 'klg@klg.com'),
+    -> ('Priyansh', 'Kumar', 'Malabar', 'Mumbai', 'Maharashtra', '530066','9882763875', 'pl@pl.com'),
+    -> ('Rahul', 'Singh', 'Guargon Sec-1', 'Guargon', 'Haryana', '530044','9494691888', 'mln@mln.com');
+
+mysql> Select * FROM address_book;
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
+| id | first_name | last_name | address       | city      | state       | zip    | phone_number | emailId     |
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
+|  1 | Mohd       | Arshad    | Karol Bagh    | New Delhi | Delhi       | 110005 | 9494691188   | klg@klg.com |
+|  2 | Priyansh   | Kumar     | Malabar       | Mumbai    | Maharashtra | 530066 | 9882763875   | pl@pl.com   |
+|  3 | Rahul      | Singh     | Guargon Sec-1 | Guargon   | Haryana     | 530044 | 9494691888   | mln@mln.com |
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
 
 
 
