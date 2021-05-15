@@ -50,5 +50,20 @@ mysql> Select * FROM address_book;
 |  3 | Rahul      | Singh     | Guargon Sec-1 | Guargon   | Haryana     | 530044 | 9494691888   | mln@mln.com |
 +----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
 
+#UC4
+
+mysql> UPDATE address_book
+    -> SET phone_number = '9717704916'
+    -> WHERE first_name = 'Mohd';
+
+mysql> Select * FROM address_book;
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
+| id | first_name | last_name | address       | city      | state       | zip    | phone_number | emailId     |
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
+|  1 | Mohd       | Arshad    | Karol Bagh    | New Delhi | Delhi       | 110005 | 9717704916   | klg@klg.com |
+|  2 | Priyansh   | Kumar     | Malabar       | Mumbai    | Maharashtra | 530066 | 9882763875   | pl@pl.com   |
+|  3 | Rahul      | Singh     | Guargon Sec-1 | Guargon   | Haryana     | 530044 | 9494691888   | mln@mln.com |
++----+------------+-----------+---------------+-----------+-------------+--------+--------------+-------------+
+
 
 
