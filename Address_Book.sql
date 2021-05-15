@@ -168,5 +168,20 @@ mysql> SELECT COUNT(type) FROM address_book;
 |           4 |
 +-------------+
 
+#UC11
+
+mysql> INSERT address_book (first_name, last_name, address, city, state, zip, phone_number, emailId, name, type) VALUES
+    -> ('Atik', 'Singh', 'Dharavi', 'Mumbai', 'Maharashtra', '530044','9494631888', 'mlk@mln.com',NULL, 'Family');
+
+mysql> select *From address_book;
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
+| id | first_name | last_name | address    | city      | state       | zip    | phone_number | emailId     | name | type   |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
+|  1 | Mohd       | Arshad    | Karol Bagh | New Delhi | Delhi       | 110005 | 9717704916   | klg@klg.com | NULL | Friend |
+|  2 | Priyansh   | Kumar     | Malabar    | Mumbai    | Maharashtra | 530066 | 9882763875   | pl@pl.com   | NULL | Friend |
+|  4 | Kalyan     | Kumar     | Andheri    | Mumbai    | Maharashtra | 530066 | 9882763845   | pl@p.com    | NULL | Friend |
+|  5 | Atik       | Singh     | Dharavi    | Mumbai    | Maharashtra | 530044 | 9494631888   | mlk@mln.com | NULL | Friend |
+|  6 | Atik       | Singh     | Dharavi    | Mumbai    | Maharashtra | 530044 | 9494631888   | mlk@mln.com | NULL | Family |
++----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
 
 
