@@ -159,5 +159,14 @@ mysql> select *From address_book;
 |  5 | Atik       | Singh     | Dharavi    | Mumbai    | Maharashtra | 530044 | 9494631888   | mlk@mln.com | NULL | Friend |
 +----+------------+-----------+------------+-----------+-------------+--------+--------------+-------------+------+--------+
 
+#UC10
+
+mysql> SELECT COUNT(type) FROM address_book;
++-------------+
+| COUNT(type) |
++-------------+
+|           4 |
++-------------+
+
 
 
